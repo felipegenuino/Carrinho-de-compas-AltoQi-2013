@@ -1,0 +1,579 @@
+/*
+ Autor/front-end: Felipe Genuino
+ Site: www.felipegenuino.com
+ */
+
+/* `Basic HTML
+----------------------------------------------------------------------------------------------------*/
+
+body {  font: 13px/1.5 "titillium_webregular", Helvetica Neue, Arial, "Liberation Sans", FreeSans, sans-serif; color:#4e5e65}
+pre,code {  font-family: "DejaVu Sans Mono", Menlo, Consolas, monospace;}
+hr {  border: 0 solid #ccc; border-top-width: 1px;  clear: both;  height: 0;}
+hr.separador {  margin: 30px 0; float:left;   width: 100%;border: 0 solid #ccc; border-top-width: 1px;  clear: both;  height: 0;}
+a{ outline:none; color: #0d65f0; text-decoration: none; -webkit-transition: all 0.15s linear;-moz-transition: all 0.15s linear; -o-transition: all 0.15s linear; transition: all 0.15s linear;}
+figure,figure span, img{ -webkit-transition: all 0.15s linear;-moz-transition: all 0.15s linear; -o-transition: all 0.15s linear; transition: all 0.15s linear;}
+a:hover{ text-decoration:underline}
+b, strong {  font-weight: normal; font-family: "titillium_webBold"}
+.left{float: left; }
+.right{float: right; }
+.circulo{  background: none repeat scroll 0 0 #AAAAAA;  border-radius: 50% 50% 50% 50%; float: left; height: 320px; width: 100%;}
+.circulo-exibir{  background: none repeat scroll 0 0 #AAAAAA;  border-radius: 0%}
+
+ 
+
+sub{ font-size:0.6em}
+/* `Botoes
+----------------------------------------------------------------------------------------------------*/
+ input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea, select {
+	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	border: 1px solid #ccc;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	-o-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+	color: rgba(0,0,0,0.75);
+/*	display: block; */
+	font-size: 18px;
+	margin: 0 0 12px 0;
+	padding: 6px;
+	height: 18px;
+	width: 100%; 
+	-webkit-transition: all 0.15s linear;
+	-moz-transition: all 0.15s linear;
+	-o-transition: all 0.15s linear;
+	transition: all 0.15s linear;
+	background:none repeat scroll 0 0 #E9E9E9;
+	letter-spacing:-1px;
+}
+input[type="text"].oversize, input[type="password"].oversize, input[type="date"].oversize, input[type="datetime"].oversize, input[type="email"].oversize, input[type="number"].oversize, input[type="search"].oversize, input[type="tel"].oversize, input[type="time"].oversize, input[type="url"].oversize, textarea.oversize {
+	font-size: 17px;
+	padding: 4px 6px
+}
+input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="time"]:focus, input[type="url"]:focus, textarea:focus {
+	background: #fafafa;
+	outline: none !important;
+	border-color: #b3b3b3
+}
+input[type="text"][disabled], input[type="password"][disabled], input[type="date"][disabled], input[type="datetime"][disabled], input[type="email"][disabled], input[type="number"][disabled], input[type="search"][disabled], input[type="tel"][disabled], input[type="time"][disabled], input[type="url"][disabled], textarea[disabled] {
+	background-color: #ddd
+}
+	
+	
+input[type="submit"] {}
+
+#resumo-da-compra .titulo-botao a.btn-desabilitado{background: #9b9b9b !important}
+#resumo-da-compra .titulo-botao a.btn-desabilitado:hover{background: #9b9b9b !important; cursor: text;}
+
+#resumo-da-compra .titulo-botao a.btn-desabilitado:active {
+	-webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.0) inset;
+	-moz-box-shadow: 0 1px 0 rgba(0,0,0,0.0) inset;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.0) inset;
+}
+#resumo-da-compra .titulo-botao a.btn-desabilitado:focus {
+	-webkit-box-shadow: 0 0 4px #34a167, 0 1px 0 rgba(255,255,255,0.0) inset;
+	-moz-box-shadow: 0 0 4px #34a167, 0 1px 0 rgba(255,255,255,0.0) inset;
+	box-shadow: 0 0 4px #34a167, 0 1px 0 rgba(255,255,255,0.0) inset;
+	color: #fff
+}
+
+
+.button {
+	width: auto;
+	background: #34a167;
+	border: 1px solid #30962a;
+	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset;
+	-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset;
+	box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	 	font-size: 14px;
+	font-weight: bold;
+	line-height: 1;
+	margin: 0;
+	outline: none;
+	padding: 10px 20px 11px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	-webkit-transition: background-color 0.15s ease-in-out;
+	-moz-transition: background-color 0.15s ease-in-out;
+	-o-transition: background-color 0.15s ease-in-out;
+	transition: background-color 0.15s ease-in-out
+}
+.button:hover {
+	color: #fff;
+	background-color: #38AE6F
+}
+.button:active {
+	-webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.2) inset;
+	-moz-box-shadow: 0 1px 0 rgba(0,0,0,0.2) inset;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.2) inset
+}
+.button:focus {
+	-webkit-box-shadow: 0 0 4px #34a167, 0 1px 0 rgba(255,255,255,0.5) inset;
+	-moz-box-shadow: 0 0 4px #34a167, 0 1px 0 rgba(255,255,255,0.5) inset;
+	box-shadow: 0 0 4px #34a167, 0 1px 0 rgba(255,255,255,0.5) inset;
+	color: #fff
+}
+
+
+.button.large {
+	font-size: 17px;
+	padding: 15px 30px 16px
+}
+.button.medium {
+	font-size: 14px
+}
+.button.small {
+	font-size: 11px;
+	padding: 7px 14px 8px
+}
+.button.tiny {
+	font-size: 10px;
+	padding: 5px 10px 6px
+}
+.button.expand {
+	width: 100%;
+	text-align: center
+}
+
+/* `Tipografia
+----------------------------------------------------------------------------------------------------*/
+
+@font-face {
+    font-family: 'titillium_webbold';
+    src: url('fonts/titilliumweb-bold-webfont.eot');
+    src: url('fonts/titilliumweb-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/titilliumweb-bold-webfont.woff') format('woff'),
+         url('fonts/titilliumweb-bold-webfont.ttf') format('truetype'),
+         url('fonts/titilliumweb-bold-webfont.svg#titillium_webbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'titillium_webthin';
+    src: url('fonts/titilliumweb-extralight-webfont.eot');
+    src: url('fonts/titilliumweb-extralight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/titilliumweb-extralight-webfont.woff') format('woff'),
+         url('fonts/titilliumweb-extralight-webfont.ttf') format('truetype'),
+         url('fonts/titilliumweb-extralight-webfont.svg#titillium_webthin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'titillium_weblight';
+    src: url('fonts/titilliumweb-light-webfont.eot');
+    src: url('fonts/titilliumweb-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/titilliumweb-light-webfont.woff') format('woff'),
+         url('fonts/titilliumweb-light-webfont.ttf') format('truetype'),
+         url('fonts/titilliumweb-light-webfont.svg#titillium_weblight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'titillium_webregular';
+    src: url('fonts/titilliumweb-regular-webfont.eot');
+    src: url('fonts/titilliumweb-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/titilliumweb-regular-webfont.woff') format('woff'),
+         url('fonts/titilliumweb-regular-webfont.ttf') format('truetype'),
+         url('fonts/titilliumweb-regular-webfont.svg#titillium_webregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'titillium_webitalic';
+    src: url('fonts/titilliumweb-italic-webfont.eot');
+    src: url('fonts/titilliumweb-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/titilliumweb-italic-webfont.woff') format('woff'),
+         url('fonts/titilliumweb-italic-webfont.ttf') format('truetype'),
+         url('fonts/titilliumweb-italic-webfont.svg#titillium_webitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'titillium_webbold_italic';
+    src: url('fonts/titilliumweb-bolditalic-webfont.eot');
+    src: url('fonts/titilliumweb-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/titilliumweb-bolditalic-webfont.woff') format('woff'),
+         url('fonts/titilliumweb-bolditalic-webfont.ttf') format('truetype'),
+         url('fonts/titilliumweb-bolditalic-webfont.svg#titillium_webbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'titillium_weblight_italic';
+    src: url('fonts/titilliumweb-lightitalic-webfont.eot');
+    src: url('fonts/titilliumweb-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/titilliumweb-lightitalic-webfont.woff') format('woff'),
+         url('fonts/titilliumweb-lightitalic-webfont.ttf') format('truetype'),
+         url('fonts/titilliumweb-lightitalic-webfont.svg#titillium_weblight_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/* `Titulos / subtitulos
+----------------------------------------------------------------------------------------------------*/
+		h1 {  font: 30px/1.5 'titillium_webthin', Arial, 'Liberation Sans', FreeSans, sans-serif; color:#FFF;  margin-top: 55px; }
+		h1 strong {  font: 48px/1.5 'titillium_webbold', Arial, 'Liberation Sans', FreeSans, sans-serif; }
+		h2 {  font-size: 23px;}
+		h3 {   font: 16px/1.5 'titillium_weblight', Arial, 'Liberation Sans', FreeSans, sans-serif;  margin-bottom: 5px !important; text-transform: uppercase;}
+		h3 strong {  font: 16px/1.5 'titillium_webbold' }
+		h4 {  font-size: 19px;}
+		h5 {  font-size: 17px;}
+		h6 {  font-size: 15px;}
+		.copyright{ font-size: 12px;}
+		form.login label{font: 14px/1.5 'titillium_webitalic', Arial, 'Liberation Sans', FreeSans, sans-serif;    }
+		.box-rodape{ font-family:'titillium_webregular', Arial, 'Liberation Sans', FreeSans, sans-serif;}
+		.big{   font: 136px/0.9 'titillium_webbold';    letter-spacing: -7.6px; text-align:center}
+		
+		.conteudo-2{}
+		.conteudo-2 h3{ font: 30px/12px titillium_weblight;    margin-bottom: 20px !important;}
+		.conteudo-2 h3 strong {  font: 30px/1.5 'titillium_webbold' }
+		.conteudo-2 p{font:25px/30px titillium_weblight} 
+		
+		h2.titulo {  font-size: 37px; line-height: 40px;  margin-bottom: 10px !important;}
+		h3.subtitulo {   font: 16px/1.5 'titillium_weblight', Arial, 'Liberation Sans', FreeSans, sans-serif;  margin-bottom: 5px !important; text-transform: uppercase;}
+		hr.espaco{ border-color: #F2F2F2; display: block; float: left; margin-bottom: 20px; width: 100%;}		
+ 	
+		ul.lista{}
+		ul.lista li{ float: none;
+    font-size: 21px;
+    list-style: none outside none;
+    margin-left: 0;}
+		ul.lista li a{}
+
+
+/* `Spacing
+----------------------------------------------------------------------------------------------------*/
+		ol {  list-style: decimal;}
+		ul {  list-style: disc;}
+		li {  margin-left: 30px; float: left;}
+		p,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset,figure {  margin-bottom: 20px;}
+ 
+
+ 
+/* `Seleção amarela
+----------------------------------------------------------------------------------------------------*/
+		::selection {background: #FFFF00; /* Safari */  color: #000;  text-shadow: none;}
+		::-moz-selection {background: #FFFF00; /* Firefox */ color: #000; text-shadow: none;}
+
+
+/* Estrutura
+-------------------------------------------------- */
+		#header{   	background: url("../img/background-header.png") no-repeat scroll center top #423848;   padding: 25px 0 15px 10px;  position: relative;    z-index: 2000;}
+ 		#conteudo{  background: url("../img/background-conteudo.png") no-repeat scroll center top #f2f2f2; padding: 35px  0; min-height: 400px;	 -webkit-box-shadow: inset 0px 0px 6px 2px rgba(0, 0, 0, 0.3);  -moz-box-shadow: inset 0px 0px 6px 2px rgba(0, 0, 0, 0.3); box-shadow: inset 0px 0px 6px 2px rgba(0, 0, 0, 0.3);   position: relative;    z-index: 1000; }
+ 		body.hotsite #conteudo{  background: #f2f2f2; }
+    	#rodape{  	padding: 20px 0;}
+			
+
+/* Navegação usuário
+-------------------------------------------------- */
+		#nav-user{list-style: none outside none;  float: right;}
+		#nav-user li{ float: left;}
+		#nav-user li a{  color: #999;    text-decoration: none;}
+		#nav-user li a:hover{ color:#423848}
+		#nav-user li span.usuario{  background: url("../img/icons-preto.png") no-repeat scroll -166px 2px transparent; float: left; height: 16px; width: 20px; }
+		#nav-user li span.sair{  background: url("../img/icons-preto.png") no-repeat scroll -382px 2px transparent; float: left; height: 16px; width: 20px;}
+		
+
+
+
+ /* bloco login
+-------------------------------------------------- */
+		#bloco-login{ background:#fff; border: 1px solid #E8E8E8;float: left; width: 100%;}
+		form.login {  width: 100%;}
+		form.login label {color: #AAAAAA;    display: block;   width: 100%;    }
+		form.login input { float: left; width: 65%;}
+		form.login input[type="submit"] {float: left;    width: 25%;}
+		.box-header{ padding:3px 10px; background:#f8f8f8; border:1px solid #e8e8e8;  border-top: 3px solid #34a167; }
+		#bloco-login .box-conteudo{float: left; width: 85%; margin-left: 30px;padding: 10px 10px 0;}
+		#bloco-login .box-conteudo-rodape{float:left; width:100%}
+		.box-rodape{ color: #AAAAAA; float: left; padding: 10px; width: 94%;}
+		hr.linha{ margin: 5px 0;   width: 84%;}
+		.box-header h3{}
+		.box-conteudo{float: left; width: 100%;   }
+		.box-conteudo-rodape{border-top: 1px solid #EEEEEE; float: left; padding: 10px 0;  text-align: center; width: 100%;}
+		.box-conteudo-rodape em{ display: block;  font-size: 14px; font-style: normal;  line-height: 0.5; }
+		.box-conteudo-rodape span{ font-size: 18px;  }
+ 
+
+ /* bloco básico
+-------------------------------------------------- */
+		#bloco-basico{ background:#fff; border: 1px solid #E8E8E8;float: left; width: 100%;}
+		 #bloco-compras{ background:#fff; border: 1px solid #E8E8E8;float: left; width: 100%;}
+ 
+
+
+
+ /* Resumo da compra
+-------------------------------------------------- */
+		#resumo-da-compra{background: none repeat scroll 0 0 #777777;	  border-top: 2px solid #34A167; float: left; height: 75px; list-style: none outside none;    color: #FFFFFF;}
+		#resumo-da-compra li{ border-right: 1px solid #333333; display: block; float: left; height: 75px; margin-left: 0; }
+		#resumo-da-compra li:last-child{ border:none}
+	 	#resumo-da-compra .titulo-parcelas{background: none repeat scroll 0 0 #656565; border-right: 1px solid #555555; float: left; height: 100%; padding: 0 15px; width: 130px;}
+		#resumo-da-compra .titulo-formas-de-pagamento{ background: none repeat scroll 0 0 #656565; border-right: 1px solid #555555;  float: left;  height: 100%; padding: 0 15px; width: 150px;}
+		#resumo-da-compra .titulo-valor-total{  background: none repeat scroll 0 0 #656565; border-right: 1px solid #555555; float: left;height: 100%; padding: 0 15px; width: 120px;}
+		#resumo-da-compra .titulo-botao{   float: left;    width: 248px;}
+		#resumo-da-compra .titulo-botao a:hover{text-decoration:none}
+		#resumo-da-compra .titulo-botao a{   float: left; font-size: 18px; font-weight: normal; height: 18px; margin-top: -2px; padding: 28px 13px; text-align: center; width: 100%;font-family: 'titillium_webbold';text-transform: uppercase;}
+		#resumo-da-compra span{    float: left;font-size: 18px; width: 100%;}
+		#resumo-da-compra em{    color: #CCCCCC; float: left; padding-top: 5px; }
+ 		#resumo-da-compra .titulo-resumo-da-compra {   border-right: 1px solid #555555; float: left; height: 100%; width: 218px; }
+		#resumo-da-compra .titulo-resumo-da-compra h3{ margin-top: 25px; padding:0px 30px;}
+		
+		
+		
+  
+
+
+/* controlador
+-------------------------------------------------- */		
+		.controlador{ margin-bottom: 20px;    text-align: center;}
+		.checkbox.checked, .radio.checked { background: none repeat scroll 0 0 #777777;   color: #FFFFFF;	 }		
+		.radio, .checkbox { min-height: 20px; padding: 10px 0 10px 20px;}
+		.checkbox.checked .icon, .radio.checked .icon { background-position: -60px -30px;    opacity: 1;}
+		.radio .icon, .radio .icon-to-fade { background-image: url("../img/radio.png") !important ;}
+		.checkbox, .radio {   padding-left: 32px; position: relative; transition: all 0.25s ease 0s;}
+		.checkbox.disabled.checked .icon, .radio.disabled.checked .icon {    background-position: 0 -90px;    opacity: 1;}
+		.checkbox.disabled .icon-to-fade, .radio.disabled .icon-to-fade {    background-position: -30px -60px;    opacity: 1;}
+		.checkbox.disabled, .radio.disabled {    color: #D7DDDD;   cursor: default;}
+		.checkbox.disabled, .radio.disabled {  color: #D7DDDD;  cursor: default; }
+		 
+		label {    display: block;}
+		label, input, button, select, textarea {    font-size: 14px;    font-weight: normal;    line-height: 20px;}
+		label, select, button, input[type="button"], input[type="reset"], input[type="submit"], input[type="radio"], input[type="checkbox"] {    cursor: pointer;}
+		.radio input[type="radio"], .checkbox input[type="checkbox"] {  float: left;  margin-left: 0px;}
+		.checkbox input, .radio input {   opacity: 0;  outline: medium none !important;}
+		input[type="file"], input[type="image"], input[type="submit"], input[type="reset"], input[type="button"], input[type="radio"], input[type="checkbox"] {width: auto;}
+		input[type="radio"], input[type="checkbox"] {line-height: normal; margin: 4px 0 0;}
+		label, select, button, input[type="button"], input[type="reset"], input[type="submit"], input[type="radio"], input[type="checkbox"] {cursor: pointer;}
+		input, textarea, .uneditable-input {  width: 192px;}
+		input, textarea, .uneditable-input {  margin-left: 0;}
+		input, textarea, .uneditable-input {  width: 206px;}
+		input, button, select, textarea { }
+		label, input, button, select, textarea {    font-size: 14px; font-weight: normal; line-height: 20px;}
+		.radio .icon, .radio .icon-to-fade {   background-image: url("../img/radio.png");}
+		.checkbox .icon, .radio .icon { opacity: 0; top: 0; z-index: 2;}
+		.checkbox .icon, .checkbox .icon-to-fade, .radio .icon, .radio .icon-to-fade {  background: url("../img/checkbox.png") no-repeat scroll -90px 0 transparent;  display: block; height: 20px;  left: 10px;  opacity: 1; position: absolute;  top: 10px;  transition: opacity 0.1s linear 0s; width: 20px; }
+		 
+	 
+/* abas
+-------------------------------------------------- */	 
+	 
+
+/* 'cartao de credito
+---------------------------------------------------------------------------------------------------- */	
+	.cartaodecredito input { border: 1px solid #CCCCCC;}
+	.cartaodecredito label { }
+	
+	#listacartao{float: left; width: 450px; padding:5px 0;}
+	#listacartao li{ list-style: none outside none;  margin-left: 0;}
+	#listacartao li a.active{}
+	#listacartao li a{ display: block; padding: 8px 7px; text-decoration: none; width: 60px; }
+
+/* Inserções Pedro - Inicio */
+	#listacartao div{ height:37px; cursor:pointer; width:90px; float:left;}
+	#listacartao div a{ display: block; padding: 8px 7px; text-decoration: none; width: 60px; }
+	#listacartao .active .visa{ background-position: -94px 0;}
+	#listacartao .active .master{ background-position: -94px -40px;}
+	#listacartao .active .hipercard{ background-position: -94px -78px;}
+	#listacartao .active .americanexpress{ background-position: -94px -115px;}
+	#listacartao .active .dinnerclub{ background-position: -94px -154px;}
+/* Inserções Pedro  - Fim */
+	 
+	#listacartao .visa ,
+	#listacartao .master ,
+	#listacartao .hipercard ,
+	#listacartao .americanexpress,
+	#listacartao .dinnerclub{ background:url("../img/cartoes.png"); background-repeat:no-repeat;}
+	
+	#listacartao .visa{ background-position: 0 0} 
+	#listacartao .master { background-position: 0 -40px;}
+	#listacartao .hipercard{ background-position: 0 -78px}
+	#listacartao .americanexpress{ background-position: 0 -115px}
+	#listacartao .dinnerclub{ background-position: 0 -154px}
+
+	#listacartao li.active .visa{ background-position: -94px 0}
+	#listacartao li.active .master { background-position:  -94px -40px}
+	#listacartao li.active .hipercard{ background-position:  -94px -78px}
+	#listacartao li.active .americanexpress{ background-position:  -94px -115px}
+	#listacartao li.active .dinnerclub{ background-position:  -94px -154px}
+	select{border: 1px solid #CCCCCC; height: 35px; overflow: hidden; /* border-radius: 5px 5px 5px 5px; */ padding: 5px;  }
+ 
+	select.inputmedio {width: 112px;}
+	select.inputpequeno{width: 90px;}
+	select.inputgrande {width: 144px;}
+ 
+	.mascara-venmes{  float: left; margin-right: 10px;  overflow: hidden;  width: 110px;  height: 30px;}
+	.mascara-vencano-parcelas{    margin-right: 10px;  overflow: hidden;  width: 70px;}
+	.info-pagamento{ float: left;  padding: 10px;  width: 200px;  height: 300px;  position: relative;}
+ 	.conteudo-pagamento, .conteudo-finalizar{ /*background: none repeat scroll 0 0 red;*/ float: left;  width: 435px; height:300px}
+	 
+
+ /* cheque e boleto
+---------------------------------------------------------------------------------------------------- */	
+	.chequeboleto label {  background: none repeat scroll 0 0 #ededed;  border: 1px solid #CCCCCC; border-radius: 5px 5px 5px 5px; color: #999999;  display: block;  margin: 4px; padding: 4px 10px;}
+/*	.chequeboleto input {background:none} */
+	.chequeboleto label span {  background: none repeat scroll 0 0 #FFF;  border: 1px solid #CCCCCC; border-radius: 5px 5px 5px 5px; color: #999999;  margin: 4px 1px; padding: 4px 3px; font-size:18px;}
+	.chequeboleto label.active {  background: none repeat scroll 0 0 #FaFaFa;  border: 1px solid #CCCCCC; border-radius: 5px 5px 5px 5px; color: #999999;  display: block;  margin: 4px; padding: 4px 10px; box-shadow: -1px 1px 2px;}
+	.chequeboleto label.active span {  background: none repeat scroll 0 0 #e9e9e9;  border: 1px solid #CCCCCC; border-radius: 5px 5px 5px 5px; color: #999999;  margin: 4px 1px; padding: 4px 0; font-weight:bold; font-size:18px;}
+	 
+ 	 
+	 
+	#tabformasdepagamento{border-bottom: 1px solid; background:#f2f2f2;display: block; float: left; margin-bottom: -1px; width:100%;  position: relative; z-index: 2000;}
+	#tabformasdepagamento li { display: inline; margin:0}
+	#tabformasdepagamento li a { color:#777; background: #f2f2f2;  text-transform: uppercase; padding: 10px 39px; float:left; border: 1px solid #ccc; border-top: 3px solid #ccc;  border-bottom:none; text-decoration: none;  font-weight: bold;}
+	#tabformasdepagamento li.active a {  margin-bottom: -2px; background: none repeat scroll 0 0 #FFFFFF; border-top: 3px solid #34A167;  border-bottom: 1px solid #fff;  }
+	.conteudotab {background: #fff;   float: left; clear: both; border: 1px solid #ccc;  border-top:none;  padding: 10px 20px 20px;  width:443px; border-top:1px solid #ccc }
+
+ 
+/*
+|--------------------------------------------------------------------------
+| UItoTop jQuery Plugin 1.2
+| http://www.mattvarone.com/web-design/uitotop-jquery-plugin/
+|--------------------------------------------------------------------------
+*/
+
+#toTop {
+	display:none;
+	text-decoration:none;
+	position:fixed;
+	bottom:10px;
+	right:10px;
+	overflow:hidden;
+	width:51px;
+	height:51px;
+	border:none;
+	text-indent:100%;
+	background:url("../img/ui.totop.png") no-repeat left top;
+	z-index:6000
+}
+
+
+ #toTopHover {
+	background:url("../img/ui.totop.png") no-repeat left -51px;
+	width:51px;
+	height:51px;
+	display:block;
+	overflow:hidden;
+	float:left;
+	opacity: 0;
+	-moz-opacity: 0;
+	filter:alpha(opacity=0);
+	z-index:6000
+}
+
+#toTop:active, #toTop:focus {
+	outline:none;
+	
+}
+
+
+
+
+
+ 
+ /* ==========================================================
+ 	'CÓDIGO DO HOTSITE
+	========================================================== */	
+	
+	
+ /* Geral
+---------------------------------------------------------------------------------------------------- */	
+nav#menu {
+    background: none repeat scroll 0 0 #777777;
+    float: left;
+    margin-bottom: 50px;
+    position: relative;
+    width: 100%;
+    z-index: 3000;
+}
+nav#menu ul{      float: left; margin-bottom: 0;}
+nav#menu ul li{ list-style: none outside none;    margin-left: 0;}
+nav#menu ul li.active{  }
+nav#menu ul li.active a, nav#menu ul li.active a:hover { background: none repeat scroll 0 0 #F2F2F2;    color: #777777; }
+nav#menu ul li a{ background: none repeat scroll 0 0 #646464 ;  color: #FFFFFF;
+    display: block;
+    font-family: titillium_webthin;
+    font-size: 24px;
+    padding: 20px 25px;}
+nav#menu ul li a:hover{  text-decoration:none;  background: none repeat scroll 0 0 #555 ;}
+
+
+ /* Sections home
+---------------------------------------------------------------------------------------------------- */	
+	section#apresentacao{ }
+		section#apresentacao article{}
+		
+	section figure{  float: left;    text-align: center;}
+
+	section#apresentacao figure figcaption{}
+		
+	
+
+
+figure  .primeiro{ background:url("../img/wtc.jpg") repeat scroll -59px -35px transparent; float: left; height: 320px; width: 100%; }
+ figure  .primeiro:hover{ background:url("../img/wtc.jpg") repeat scroll -40px -15px transparent;  }
+ 
+ figure  .segundo {background:url("../img/joelmafogo2.jpg") repeat scroll -59px -35px transparent; float: left; height: 320px; width: 100%;}
+ figure .segundo:hover{ background:url("../img/joelmafogo2.jpg") repeat scroll -40px -15px transparent;  }
+ 
+  figure .terceiro {background:url("../img/modulo-incendio.png") repeat scroll 0px 0px transparent; float: left; height: 320px; width: 100%;}
+
+
+	section#apresentacao figure img{  }
+		section#apresentacao figure img:hover{  }
+
+  
+ 
+ /* Section recursos
+---------------------------------------------------------------------------------------------------- */	
+		section#recursos{}
+		section#recursos article{ border-radius: 6px 6px 6px 6px; background: none repeat scroll 0 0 #FFFFFF; border: 1px solid #CCCCCC;    float: left;    margin-bottom: 2%;   }
+ 		section#recursos article hgroup{float: left;  padding-top: 2%; width: 33%;}
+		 		section#recursos article hgroup h3{ border-left: 10px solid; font: 25px/1.2 'titillium_weblight',Arial,'Liberation Sans',FreeSans,sans-serif;     margin-bottom: 20px !important; padding-left: 10px; text-transform: none;}
+				section#recursos article hgroup p{  padding-left: 20px; }
+				section#recursos article hgroup a.botao-saiba-mais{  padding-left: 20px;    padding-right: 40px; }
+
+		section#recursos article figure{float: right;margin-bottom: 0; } 
+	section#recursos article figure img{border-radius: 0px 6px 6px 0px; }
+	
+	
+	
+	
+	
+	
+	
